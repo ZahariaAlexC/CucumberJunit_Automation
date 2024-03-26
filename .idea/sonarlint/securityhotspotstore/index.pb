@@ -27,3 +27,6 @@ q
 Areports/PixelReport_ 26_Mar_24 18_02_22/Reports/Pixel_Report.html,1\d\1dc0a28000700b131f91553faf149ed2783dd2fd
 q
 Areports/PixelReport_ 26_Mar_24 18_05_38/Reports/Pixel_Report.html,c\9\c9c00caa80160a40cbf66a2735d508c8f2433ab5
+:
+
+.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
