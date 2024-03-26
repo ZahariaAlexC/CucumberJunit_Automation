@@ -61,7 +61,6 @@ public class BasePage {
             JavascriptExecutor js = (JavascriptExecutor) driver;
             js.executeScript("window.scrollBy(" + x + "," + y + ")");
         }
-        //div[@class="oxd-select-text-input"]
         protected String getPageTitle() {
             return driver.getTitle();
         }
