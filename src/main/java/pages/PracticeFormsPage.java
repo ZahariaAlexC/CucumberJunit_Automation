@@ -53,8 +53,10 @@ public class PracticeFormsPage extends BasePage {
 
     public void choosePracticeForm(){
         waitPage().until(ExpectedConditions.visibilityOf(form));
+        moveToElement();
         click(form);
         click(practiceFormMenu);
+        moveToElement();
     }
 
     public void setFirstName(String firstName){
