@@ -1,14 +1,18 @@
-package com.serra.automation.stepsdefinition;
+package com.serra.automation.stepsdefinition.practiceform;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.jupiter.api.Assertions;
-import pages.LoginPage;
+import pages.practiceform.LoginPage;
 
 public class Login {
-    LoginPage loginPage = new LoginPage();
+    LoginPage loginPage;
     String username;
     String password;
+
+    public Login() {
+        this.loginPage = new LoginPage();
+    }
 
     @Given("Fill in {} and {}")
     public void fillInAnd(String username, String password) {
@@ -18,7 +22,7 @@ public class Login {
         loginPage.setPasswordBox(password);
     }
 
-    @Then("press Login button")
+    @Then("press com.serra.automation.stepsdefinition.orangehrm.Login button")
     public void pressLoginButton() {
         loginPage.clickOnLoginButton();
         loginPage.setUsernameBox(this.username);

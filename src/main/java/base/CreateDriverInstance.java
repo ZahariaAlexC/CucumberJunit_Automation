@@ -21,7 +21,6 @@ public class CreateDriverInstance {
             options.addArguments("--remote-allow-origins=*");
             driver_local = new ChromeDriver(options);
             driver_local.manage().window().maximize();
-            driver_local.get("https://demoqa.com/");
             driver_local.manage().deleteAllCookies();
             action = new Actions(driver_local);
         return driver_local;
@@ -33,7 +32,6 @@ public class CreateDriverInstance {
             EdgeOptions options = new EdgeOptions();
             options.addArguments("--remote-allow-origins=*");
             driver_local = new EdgeDriver(options);
-            driver_local.get("https://opensource-demo.orangehrmlive.com/");
             driver_local.manage().window().maximize();
             driver_local.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         }

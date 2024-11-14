@@ -1,4 +1,4 @@
-package pages;
+package pages.practiceform;
 
 import base.BasePage;
 import com.mongodb.binding.WriteBinding;

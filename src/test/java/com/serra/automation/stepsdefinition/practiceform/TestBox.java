@@ -1,12 +1,17 @@
-package com.serra.automation.stepsdefinition;
+package com.serra.automation.stepsdefinition.practiceform;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import pages.TestBoxPage;
+import pages.practiceform.TestBoxPage;
 
 public class TestBox {
-    TestBoxPage testBoxPage = new TestBoxPage();
+    TestBoxPage testBoxPage;
+
+    public TestBox() {
+        this.testBoxPage = new TestBoxPage();
+    }
+
     @Given("Navigate to TextBox option")
     public void navigateToTextBoxOption() {
         testBoxPage.navigateToElements();

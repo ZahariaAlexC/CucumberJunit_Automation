@@ -1,4 +1,4 @@
-package pages;
+package pages.practiceform;
 
 import base.BasePage;
 import org.openqa.selenium.WebElement;
