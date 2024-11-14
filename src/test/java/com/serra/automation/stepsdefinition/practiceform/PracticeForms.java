@@ -1,13 +1,18 @@
-package com.serra.automation.stepsdefinition;
+package com.serra.automation.stepsdefinition.practiceform;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import lombok.SneakyThrows;
-import pages.PracticeFormsPage;
+import pages.practiceform.PracticeFormsPage;
 
 public class PracticeForms {
-    PracticeFormsPage practiceFormsPage = new PracticeFormsPage();
+    PracticeFormsPage practiceFormsPage;
+
+    public PracticeForms() {
+        this.practiceFormsPage = new PracticeFormsPage();
+    }
+
     @Given("Navigate to Forms and Practice form")
     public void navigateToFormsAndPracticeForm() {
         practiceFormsPage.choosePracticeForm();

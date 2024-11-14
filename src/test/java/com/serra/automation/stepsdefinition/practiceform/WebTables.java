@@ -1,13 +1,18 @@
-package com.serra.automation.stepsdefinition;
+package com.serra.automation.stepsdefinition.practiceform;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.jupiter.api.Assertions;
-import pages.WebTablePage;
+import pages.practiceform.WebTablePage;
 
 public class WebTables {
-    WebTablePage webTablePage =  new WebTablePage();
+    WebTablePage webTablePage;
+
+    public WebTables() {
+        this.webTablePage = new WebTablePage();
+    }
+
     @Given("Navigate to weTable")
     public void navigateToWeTable() {
         webTablePage.navigateToElements();

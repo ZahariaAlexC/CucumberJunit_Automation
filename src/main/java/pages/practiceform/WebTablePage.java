@@ -1,4 +1,4 @@
-package pages;
+package pages.practiceform;
 
 import base.BasePage;
 import org.openqa.selenium.WebElement;
@@ -9,7 +9,7 @@ import java.util.List;
 
 public class WebTablePage extends BasePage {
     String namePerson;
-    String lastNamePErson;
+    String lastNamePerson;
     String emailPerson;
 
     @FindBy(xpath = "//button[@id='submit']")
@@ -56,7 +56,7 @@ public class WebTablePage extends BasePage {
 
     public void registrationPerson(String name, String lastName, String email, String age, String salary, String department ){
         namePerson = name;
-        lastNamePErson = lastName;
+        lastNamePerson = lastName;
         emailPerson = email+"@gmail.com";
         waitPage().until(ExpectedConditions.visibilityOf(addRecord));
         click(addRecord);
@@ -77,7 +77,7 @@ public class WebTablePage extends BasePage {
         boolean isItemSaved =false;
         for (WebElement listOfRecord : listOfRecords) {
             if (listOfRecord.getText().contains(namePerson) &&
-                    listOfRecord.getText().contains(lastNamePErson) &&
+                    listOfRecord.getText().contains(lastNamePerson) &&
                     listOfRecord.getText().contains(emailPerson)) {
                 isItemSaved = true;
             }
@@ -88,7 +88,7 @@ public class WebTablePage extends BasePage {
     public boolean deleteItemAndCheck(){
         for (int i = 1; i < rowsItems.size();i++) {
             if (rowsItems.get(i).getText().contains(namePerson) ||
-                    rowsItems.get(i).getText().contains(lastNamePErson) ||
+                    rowsItems.get(i).getText().contains(lastNamePerson) ||
                     rowsItems.get(i).getText().contains(emailPerson)) {
                     click(deleteItemBtn.get(i-1));
                     break;
